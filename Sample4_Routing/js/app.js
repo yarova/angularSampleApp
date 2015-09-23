@@ -5,8 +5,14 @@ app.config(function ($routeProvider) {
     	.when('/', { 
           controller: 'HomeController', 
           templateUrl: 'views/home.html' 
-    	}) 
-    	.otherwise({ 
+    	})
+
+		.when('/photos/:id', {
+			controller: 'PhotoController',
+			templateUrl: 'views/photo.html'
+		})
+
+		.otherwise({
       			redirectTo: '/' 
     	}); 
 });

@@ -2,6 +2,7 @@ app.controller('MainController', ['$scope', 'bookService', function($scope, book
 	$scope.title = 'My new title';
   	$scope.promo = "My promo string";
   	$scope.products = bookService.getBooks();
+
 	$scope.plusOne = function(index){
 		$scope.products[index].likes +=1;
 	};
